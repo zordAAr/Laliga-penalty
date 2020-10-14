@@ -25,23 +25,26 @@ var selectToss = () =>{
     console.log(toss);
 }
 
+
 var updateButtonText = () =>{
     var button = document.getElementById("strike-button");
     console.log(button);
     var result = document.getElementById("result");
+    var btn1 = document.getElementById("btn1");
     result.style.visibility ="";
+    
     
     if(team1.runs.length == 6 && team2.runs.length == 6){
         button.remove();
+        btn1.textContent = "Try Again";
         result.textContent = team1.score === team2.score ? `Its a draw`: `${team1.score > team2.score? team1.name:team2.name} Wins`;
     }
     else{
-        // toss = team1.runs.length ===6 ? 2 : team2.runs.length === 6 ? 1 : toss;
-        toss = toss===1 ? 2 : 1 ;
+        toss = toss === 1 ? 2 : 1;
     }
 
 
-    button.textContent = `${toss === 1 ? team1.name:team2.name} Strike`;
+    button.textContent = `${toss%2 === 1 ? team1.name:team2.name} Strike`;
 };
 
 var updateNames = () =>{
@@ -91,16 +94,15 @@ return num =='W'? 0: num;
 
 };
         
-
-
 var updateRuns = () =>{
     var teamOneRunsElement = document.getElementById("team-1-round-runs").children;
     var teamTwoRunsElement = document.getElementById("team-2-round-runs").children;
 
     team1.runs.forEach((run,index)=>{
-        teamOneRunsElement[index].textContent = run;
+        run === 1 ? teamOneRunsElement[index].style.backgroundColor = "green" :teamOneRunsElement[index].style.backgroundColor = "red";
     });
     team2.runs.forEach((run,index)=>{
-        teamTwoRunsElement[index].textContent = run;
+        run === 1 ? teamTwoRunsElement[index].style.backgroundColor = "green" : teamTwoRunsElement[index].style.backgroundColor = "red";
+
     });
 }
