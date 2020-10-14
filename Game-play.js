@@ -36,7 +36,8 @@ var updateButtonText = () =>{
         result.textContent = team1.score === team2.score ? `Its a draw`: `${team1.score > team2.score? team1.name:team2.name} Wins`;
     }
     else{
-        toss = team1.runs.length ===6 ? 2 : team2.runs.length === 6 ? 1 : toss;
+        // toss = team1.runs.length ===6 ? 2 : team2.runs.length === 6 ? 1 : toss;
+        toss = toss===1 ? 2 : 1 ;
     }
 
 
