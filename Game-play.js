@@ -1,45 +1,14 @@
-// console.log("Welcome ProGrads");
-// // alert("Welcome");
-
-// var a = 5;
-// var b = 6;
-
-// if (a == b )
-//     console.log(a);
-//     else 
-//     console.log(b);
-
-// (a==b)? console.log(a):console.log(b);
-
-// // for(var i = 1;i<=5;i++ )
-// //     console.log(i);
-
-// var array = [1,2,3,4,5];
-
-// for(let j = 1; j<=array.length;j++)
-// {
-//     console.log("using loops")
-//     console.log(array[j]);
-// }
-
-// console.log(array.forEach((index)=>{
-//     console.log("using foreach");
-//     console.log(index);
-// }));
-
-
-var score = [0,1,2,3,4,5,6];
+var score = [0,1];
 
 var team1={
-    //Team1 details
-    name: "CSK",
+    name: "Real Madrid",
     runs: [],
     score:0
 }
 
 var team2={
     //Team2 details
-    name: "Mumbai Indians",
+    name: "Huesca",
     runs: [],
     score:0
 }
