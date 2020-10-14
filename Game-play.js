@@ -99,10 +99,10 @@ var updateRuns = () =>{
     var teamTwoRunsElement = document.getElementById("team-2-round-runs").children;
 
     team1.runs.forEach((run,index)=>{
-        run === 1 ? teamOneRunsElement[index].style.backgroundColor = "green" :teamOneRunsElement[index].style.backgroundColor = "red";
+        run === 1 ? teamOneRunsElement[index].style.backgroundColor = "#135813" :teamOneRunsElement[index].style.backgroundColor = "#d00c0c";
     });
     team2.runs.forEach((run,index)=>{
-        run === 1 ? teamTwoRunsElement[index].style.backgroundColor = "green" : teamTwoRunsElement[index].style.backgroundColor = "red";
+        run === 1 ? teamTwoRunsElement[index].style.backgroundColor = "#135813" : teamTwoRunsElement[index].style.backgroundColor = "#d00c0c";
 
     });
 }
